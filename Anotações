@@ -1,0 +1,139 @@
+Anatomia de uma Classe em Java
+Uma classe em Java é um blueprint (ou plano) para criar objetos. Ela define atributos e métodos que os objetos da classe terão. Vamos ver a estrutura básica de uma classe em Java:
+
+java
+Copiar código
+// Declaração de um pacote (opcional)
+package com.exemplo.meupacote;
+
+// Importação de bibliotecas (opcional)
+import java.util.List;
+
+// Declaração da classe
+public class MinhaClasse {
+
+    // Atributos (variáveis de instância)
+    private int idade;
+    private String nome;
+
+    // Construtor
+    public MinhaClasse(int idade, String nome) {
+        this.idade = idade;
+        this.nome = nome;
+    }
+
+    // Métodos (comportamentos)
+    public int getIdade() {
+        return idade;
+    }
+
+    public void setIdade(int idade) {
+        this.idade = idade;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    // Método principal
+    public static void main(String[] args) {
+        // Criação de um objeto da classe MinhaClasse
+        MinhaClasse pessoa = new MinhaClasse(30, "João");
+        System.out.println("Nome: " + pessoa.getNome());
+        System.out.println("Idade: " + pessoa.getIdade());
+    }
+}
+Componentes de uma Classe
+Declaração do Pacote: Define o pacote ao qual a classe pertence. É opcional.
+
+java
+Copiar código
+package com.exemplo.meupacote;
+Importação de Bibliotecas: Importa classes necessárias de outros pacotes. Também é opcional.
+
+java
+Copiar código
+import java.util.List;
+Declaração da Classe: Define o nome da classe e seu modificador de acesso.
+
+java
+Copiar código
+public class MinhaClasse {
+    // Corpo da classe
+}
+Variáveis de Instância (Atributos): Atributos que representam o estado da classe.
+
+java
+Copiar código
+private int idade;
+private String nome;
+Construtor: Método especial que é chamado quando um objeto da classe é criado.
+
+java
+Copiar código
+public MinhaClasse(int idade, String nome) {
+    this.idade = idade;
+    this.nome = nome;
+}
+Métodos: Definem os comportamentos da classe.
+
+java
+Copiar código
+public int getIdade() {
+    return idade;
+}
+
+public void setIdade(int idade) {
+    this.idade = idade;
+}
+
+public String getNome() {
+    return nome;
+}
+
+public void setNome(String nome) {
+    this.nome = nome;
+}
+Método principal (main): Ponto de entrada para a execução do programa.
+
+java
+Copiar código
+public static void main(String[] args) {
+    MinhaClasse pessoa = new MinhaClasse(30, "João");
+    System.out.println("Nome: " + pessoa.getNome());
+    System.out.println("Idade: " + pessoa.getIdade());
+}
+Lista de Tipos de Variáveis em Java
+Variáveis de Instância: Declaradas dentro da classe, mas fora de qualquer método. Cada objeto da classe tem sua própria cópia dessas variáveis.
+
+java
+Copiar código
+private int idade;
+Variáveis de Classe (Estáticas): Declaradas com a palavra-chave static. Existem uma única cópia dessas variáveis, compartilhada por todos os objetos da classe.
+
+java
+Copiar código
+private static int contador;
+Variáveis Locais: Declaradas dentro de um método e só podem ser usadas dentro desse método.
+
+java
+Copiar código
+public void meuMetodo() {
+    int numeroLocal = 10; // Variável local
+}
+Parâmetros de Método: Variáveis que são passadas para um método.
+
+java
+Copiar código
+public void setIdade(int idade) {
+    this.idade = idade;
+}
+Modificadores de Acesso
+public: Acessível de qualquer lugar.
+private: Acessível apenas dentro da classe.
+protected: Acessível dentro do mesmo pacote e subclasses.
+Sem modificador (pacote privado): Acessível apenas dentro do mesmo pacote.
